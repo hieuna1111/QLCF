@@ -34,6 +34,11 @@ namespace PhanMemQLCafe.DAOModel
 
         public TableDAO() { }
 
+        public void SwitchTable(int tableID1, int tableID2)
+        {
+            DataProvider.Instance.ExecuteQuery("USP_SwitchTable @TableID1 , @TableID2 , member1", new object[] { tableID1, tableID2});
+        }
+
         public List<Table> LoadTableList()
         {
             List<Table> tableList = new List<Table>();

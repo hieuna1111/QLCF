@@ -64,9 +64,10 @@ namespace PhanMemQLCafe
             // flpTable
             // 
             this.flpTable.AutoScroll = true;
-            this.flpTable.Location = new System.Drawing.Point(12, 31);
+            this.flpTable.Location = new System.Drawing.Point(9, 25);
+            this.flpTable.Margin = new System.Windows.Forms.Padding(2);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(636, 590);
+            this.flpTable.Size = new System.Drawing.Size(458, 479);
             this.flpTable.TabIndex = 0;
             // 
             // menuStrip1
@@ -77,14 +78,15 @@ namespace PhanMemQLCafe
             this.thôngTinTàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1055, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(869, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
@@ -94,29 +96,30 @@ namespace PhanMemQLCafe
             this.thôngTinCáNhânToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lvBill);
-            this.panel2.Location = new System.Drawing.Point(654, 106);
+            this.panel2.Location = new System.Drawing.Point(473, 86);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(389, 440);
+            this.panel2.Size = new System.Drawing.Size(385, 358);
             this.panel2.TabIndex = 3;
             // 
             // lvBill
@@ -130,11 +133,13 @@ namespace PhanMemQLCafe
             this.lvBill.GridLines = true;
             this.lvBill.HideSelection = false;
             this.lvBill.Location = new System.Drawing.Point(0, 0);
+            this.lvBill.Margin = new System.Windows.Forms.Padding(2);
             this.lvBill.Name = "lvBill";
-            this.lvBill.Size = new System.Drawing.Size(389, 440);
+            this.lvBill.Size = new System.Drawing.Size(385, 358);
             this.lvBill.TabIndex = 0;
             this.lvBill.UseCompatibleStateImageBehavior = false;
             this.lvBill.View = System.Windows.Forms.View.Details;
+            this.lvBill.SelectedIndexChanged += new System.EventHandler(this.lvBill_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -162,21 +167,23 @@ namespace PhanMemQLCafe
             this.panel3.Controls.Add(this.btnAddFood);
             this.panel3.Controls.Add(this.cbFood);
             this.panel3.Controls.Add(this.cbCategory);
-            this.panel3.Location = new System.Drawing.Point(654, 31);
+            this.panel3.Location = new System.Drawing.Point(471, 25);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(389, 69);
+            this.panel3.Size = new System.Drawing.Size(385, 56);
             this.panel3.TabIndex = 4;
             // 
             // nmFoodCount
             // 
-            this.nmFoodCount.Location = new System.Drawing.Point(327, 19);
+            this.nmFoodCount.Location = new System.Drawing.Point(318, 17);
+            this.nmFoodCount.Margin = new System.Windows.Forms.Padding(2);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.nmFoodCount.Name = "nmFoodCount";
-            this.nmFoodCount.Size = new System.Drawing.Size(59, 22);
+            this.nmFoodCount.Size = new System.Drawing.Size(63, 20);
             this.nmFoodCount.TabIndex = 3;
             this.nmFoodCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nmFoodCount.Value = new decimal(new int[] {
@@ -187,9 +194,10 @@ namespace PhanMemQLCafe
             // 
             // btnAddFood
             // 
-            this.btnAddFood.Location = new System.Drawing.Point(238, 2);
+            this.btnAddFood.Location = new System.Drawing.Point(218, 3);
+            this.btnAddFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(83, 55);
+            this.btnAddFood.Size = new System.Drawing.Size(96, 45);
             this.btnAddFood.TabIndex = 2;
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.UseVisualStyleBackColor = true;
@@ -198,17 +206,19 @@ namespace PhanMemQLCafe
             // cbFood
             // 
             this.cbFood.FormattingEnabled = true;
-            this.cbFood.Location = new System.Drawing.Point(3, 33);
+            this.cbFood.Location = new System.Drawing.Point(2, 27);
+            this.cbFood.Margin = new System.Windows.Forms.Padding(2);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(229, 24);
+            this.cbFood.Size = new System.Drawing.Size(212, 21);
             this.cbFood.TabIndex = 1;
             // 
             // cbCategory
             // 
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(3, 3);
+            this.cbCategory.Location = new System.Drawing.Point(2, 2);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(229, 24);
+            this.cbCategory.Size = new System.Drawing.Size(212, 21);
             this.cbCategory.TabIndex = 0;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -220,18 +230,20 @@ namespace PhanMemQLCafe
             this.panel1.Controls.Add(this.nmDisCount);
             this.panel1.Controls.Add(this.btnDisCount);
             this.panel1.Controls.Add(this.btnCheckOut);
-            this.panel1.Location = new System.Drawing.Point(654, 552);
+            this.panel1.Location = new System.Drawing.Point(473, 448);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(389, 69);
+            this.panel1.Size = new System.Drawing.Size(385, 56);
             this.panel1.TabIndex = 5;
             // 
             // txbTotalPrice
             // 
             this.txbTotalPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTotalPrice.Location = new System.Drawing.Point(187, 20);
+            this.txbTotalPrice.Location = new System.Drawing.Point(189, 16);
+            this.txbTotalPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txbTotalPrice.Name = "txbTotalPrice";
             this.txbTotalPrice.ReadOnly = true;
-            this.txbTotalPrice.Size = new System.Drawing.Size(109, 25);
+            this.txbTotalPrice.Size = new System.Drawing.Size(103, 21);
             this.txbTotalPrice.TabIndex = 9;
             this.txbTotalPrice.Text = "0";
             this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -239,33 +251,38 @@ namespace PhanMemQLCafe
             // cbSwitchTable
             // 
             this.cbSwitchTable.FormattingEnabled = true;
-            this.cbSwitchTable.Location = new System.Drawing.Point(3, 35);
+            this.cbSwitchTable.Location = new System.Drawing.Point(2, 28);
+            this.cbSwitchTable.Margin = new System.Windows.Forms.Padding(2);
             this.cbSwitchTable.Name = "cbSwitchTable";
-            this.cbSwitchTable.Size = new System.Drawing.Size(84, 24);
+            this.cbSwitchTable.Size = new System.Drawing.Size(94, 21);
             this.cbSwitchTable.TabIndex = 4;
             // 
             // btnSwitchTable
             // 
-            this.btnSwitchTable.Location = new System.Drawing.Point(3, 0);
+            this.btnSwitchTable.Location = new System.Drawing.Point(2, 0);
+            this.btnSwitchTable.Margin = new System.Windows.Forms.Padding(2);
             this.btnSwitchTable.Name = "btnSwitchTable";
-            this.btnSwitchTable.Size = new System.Drawing.Size(84, 27);
+            this.btnSwitchTable.Size = new System.Drawing.Size(94, 22);
             this.btnSwitchTable.TabIndex = 5;
             this.btnSwitchTable.Text = "Chuyển bàn";
             this.btnSwitchTable.UseVisualStyleBackColor = true;
+            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // nmDisCount
             // 
-            this.nmDisCount.Location = new System.Drawing.Point(93, 37);
+            this.nmDisCount.Location = new System.Drawing.Point(100, 31);
+            this.nmDisCount.Margin = new System.Windows.Forms.Padding(2);
             this.nmDisCount.Name = "nmDisCount";
-            this.nmDisCount.Size = new System.Drawing.Size(88, 22);
+            this.nmDisCount.Size = new System.Drawing.Size(85, 20);
             this.nmDisCount.TabIndex = 6;
             this.nmDisCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnDisCount
             // 
-            this.btnDisCount.Location = new System.Drawing.Point(93, 4);
+            this.btnDisCount.Location = new System.Drawing.Point(100, 0);
+            this.btnDisCount.Margin = new System.Windows.Forms.Padding(2);
             this.btnDisCount.Name = "btnDisCount";
-            this.btnDisCount.Size = new System.Drawing.Size(88, 27);
+            this.btnDisCount.Size = new System.Drawing.Size(85, 26);
             this.btnDisCount.TabIndex = 7;
             this.btnDisCount.Text = "Giảm giá";
             this.btnDisCount.UseVisualStyleBackColor = true;
@@ -273,9 +290,10 @@ namespace PhanMemQLCafe
             // btnCheckOut
             // 
             this.btnCheckOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckOut.Location = new System.Drawing.Point(302, 4);
+            this.btnCheckOut.Location = new System.Drawing.Point(296, 2);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(84, 55);
+            this.btnCheckOut.Size = new System.Drawing.Size(89, 45);
             this.btnCheckOut.TabIndex = 8;
             this.btnCheckOut.Text = "Thanh toán";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -283,15 +301,19 @@ namespace PhanMemQLCafe
             // 
             // fTableManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 633);
+            this.ClientSize = new System.Drawing.Size(869, 511);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flpTable);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(885, 550);
+            this.MinimumSize = new System.Drawing.Size(885, 550);
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lí quán cafe";

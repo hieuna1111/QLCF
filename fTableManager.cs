@@ -16,13 +16,13 @@ namespace PhanMemQLCafe
 {
     public partial class fTableManager : Form
     {
-        private object lsvBill;
 
         public fTableManager()
         {
             InitializeComponent();
             LoadTable();
             LoadCategory();
+            LoadComboboxTable(cbSwitchTable);
         }
 
         #region Method
@@ -43,6 +43,8 @@ namespace PhanMemQLCafe
 
         void LoadTable()
         {
+            flpTable.Controls.Clear();
+
             List<Table> tableList = TableDAO.Instance.LoadTableList();
 
             foreach (Table item in tableList)
@@ -90,9 +92,15 @@ namespace PhanMemQLCafe
                 lvBill.Items.Add(lsvItem);
             }
             CultureInfo culture = new CultureInfo("vi-VN");
-            txbTotalPrice.Text = totalPrice.ToString("c", culture);
-
+            txbTotalPrice.Text = totalPrice.ToString("c", culture); 
         }
+
+        void LoadComboboxTable(ComboBox cb)
+        {
+            cb.DataSource = TableDAO.Instance.LoadTableList();
+            cb.DisplayMember = "Name";
+        }
+
         #endregion
 
         #region Events
@@ -139,42 +147,109 @@ namespace PhanMemQLCafe
         }
         
         private void btnAddFood_Click(object sender, EventArgs e)
-         {
+        {
             Table table = lvBill.Tag as Table;
 
             int billID = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
 
+            int billStatus = BillDAO.Instance.GetUncheckStatusByTableID(table.ID);
+            string tableStatus = (string)BillDAO.Instance.GetTableStatusByTableID(table.ID);
+
             int foodID = (cbFood.SelectedItem as Food).ID;
 
             int count = (int)nmFoodCount.Value;
+
+            //if (billID == -1) //khi BillID này chưa tồn tại
+            //{
+            //    BillDAO.Instance.InsertBill(table.ID);
+            //    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
+            //}
+            //else if (billID != -1 && status == 1 && billID == BillDAO.Instance.GetMaxBill())
+            //{
+            //    BillDAO.Instance.InsertBill(table.ID);
+            //    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);          
+            //}
+            //else //Khi BillID này đã tồn tại
+            //{
+            //    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
+            //}
 
             if (billID == -1)
             {
                 BillDAO.Instance.InsertBill(table.ID);
                 BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
             }
-            else
+            else if (billStatus == 0 && tableStatus == "Trống")
             {
                 BillInfoDAO.Instance.InsertBillInfo(foodID, billID, count);
             }
+            else if (billStatus == 0 && tableStatus == "Đã có người")
+            {
+                BillInfoDAO.Instance.InsertBillInfo(foodID, billID, count);
+            }
+            else if (billStatus == 1 && tableStatus == "Trống")
+            {
+                BillDAO.Instance.InsertBill(table.ID);
+                BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
+            }
+            else if (billStatus == 1 && tableStatus == "Đã có người")
+            {
+                BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
+            }    
+
             ShowBill(table.ID);
+            
+            LoadTable();
         }
-        #endregion
+        
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             Table table = lvBill.Tag as Table;
 
             int billID = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+            int discount = (int)nmDisCount.Value;
+            double totalPrice = Convert.ToDouble(txbTotalPrice.Text.Split(',')[0]);
+            double finalTotalPrice = 1000*(totalPrice - (totalPrice / 100) * discount);
 
-            if (billID != -1)
+            if (BillDAO.Instance.CountSameBills(table.ID) > 0)
             {
-                if (MessageBox.Show("Bạn có chắc chắc thanh toán hóa đơn cho " + table.Name, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                billID = BillDAO.Instance.GetMaxBillOfTable(table.ID);
+            }
+
+            string tableStatus = (string)BillDAO.Instance.GetTableStatusByTableID(table.ID);
+
+            if (billID != -1 && tableStatus == "Đã có người")
+            {
+                if (MessageBox.Show(string.Format("Bạn có chắc chắn muốn thanh toán hóa đơn cho {0}?\nGiảm giá: {1}%\nThành tiền: {2}đ", table.Name, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(billID);
+                    BillDAO.Instance.CheckOut(billID, discount);
                     ShowBill(table.ID);
+
+                    LoadTable();
                 }
             }
         }
+
+        private void lvBill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void btnSwitchTable_Click(object sender, EventArgs e)
+        {
+            int tableiD1 = (lvBill.Tag as Table).ID;
+
+            int tableID2 = (cbSwitchTable.SelectedItem as Table).ID;
+
+            if (MessageBox.Show(String.Format("Bạn muốn chuyển bàn {0} qua bàn {1}?", (lvBill.Tag as Table).Name, (cbSwitchTable.SelectedItem as Table).Name), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                TableDAO.Instance.SwitchTable(tableiD1, tableID2);
+
+                LoadTable();
+            } 
+        }
+
+        #endregion
     }
 }

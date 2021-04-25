@@ -9,8 +9,9 @@ namespace PhanMemQLCafe.DTOModel
 {
     public class BillInfo
     {
-        public BillInfo(int foodID, int billID, int count)
+        public BillInfo(int id, int foodID, int billID, int count)
         {
+            this.ID = id;
             this.FoodID = foodID;
             this.BillID = billID;
             this.Count = count;
@@ -18,6 +19,7 @@ namespace PhanMemQLCafe.DTOModel
 
         public BillInfo(DataRow row)
         {
+            this.ID = (int)row["ID"];
             this.FoodID = (int)row["FoodID"];
             this.BillID = (int)row["BillID"];
             this.Count = (int)row["Count"];
@@ -45,6 +47,14 @@ namespace PhanMemQLCafe.DTOModel
         {
             get { return foodID; }
             set { foodID = value; }
+        }
+
+        private int id;
+
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
         }
     }
 }

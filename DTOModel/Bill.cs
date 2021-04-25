@@ -9,11 +9,13 @@ namespace PhanMemQLCafe.DTOModel
 {
     public class Bill
     {
-        public Bill(int id, DateTime? dateCheckIn, DateTime? dateCheckOut)
+        public Bill(int id, DateTime? dateCheckIn, DateTime? dateCheckOut, int status, int discount)
         {
             this.ID = id;
             this.DateCheckIn = dateCheckIn;
             this.DateCheckOut = dateCheckOut;
+            this.Status = status;
+            this.Discount = discount;
         }
 
         public Bill(DataRow row)
@@ -26,7 +28,24 @@ namespace PhanMemQLCafe.DTOModel
             {
                 this.DateCheckOut = (DateTime?)dateCheckOutTemp;
             }
-            
+            this.Status = (int)row["Status"];
+            this.Discount = (int)row["Discount"];
+        }
+
+        private int discount;
+
+        public int Discount
+        {
+            get { return discount; }
+            set { discount = value; }
+        }
+
+        private int status;
+
+        public int Status
+        {
+            get { return status; }
+            set { status = value; }
         }
 
         private DateTime? dateCheckOut;

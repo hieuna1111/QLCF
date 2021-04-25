@@ -49,9 +49,33 @@ namespace PhanMemQLCafe.DAOModel
             return -1;
         }
 
-        public void CheckOut(int id)
+        public int GetUncheckStatusByTableID(int id)
         {
-            string query = "UPDATE dbo.Bill SET Status = 1 WHERE BillID = " + id + "";
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE TableID = " + id + " ");
+
+            if (data.Rows.Count > 0)
+            {
+                Bill bill = new Bill(data.Rows[0]);
+                return bill.Status;
+            }
+            return -1;
+        }
+
+        public string GetTableStatusByTableID(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM FoodTable WHERE TableID = " + id + " ");
+
+            if (data.Rows.Count > 0)
+            {
+                Table table = new Table(data.Rows[0]);
+                return table.Status;
+            }
+            return "";
+        }
+
+        public void CheckOut(int id, int discount)
+        {
+            string query = "UPDATE dbo.Bill SET Status = 1 , "+ "Discount = "+ discount +" WHERE BillID = " + id + "";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
@@ -69,7 +93,31 @@ namespace PhanMemQLCafe.DAOModel
             }
             catch
             {
-                return 1;
+                return -1;
+            }
+        }
+
+        public int GetMaxBillOfTable(int id)
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT MAX(BillID) FROM Bill WHERE TableID = "+id+"");
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+
+        public int CountSameBills(int id)
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT COUNT(BillID) FROM Bill WHERE   TableID = "+id+"");
+            }
+            catch
+            {
+                return -1;
             }
         }
     }
