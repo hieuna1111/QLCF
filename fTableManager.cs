@@ -31,6 +31,7 @@ namespace PhanMemQLCafe
         {
             List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
             cbCategory.DataSource = listCategory;
+            cbCategory.ForeColor = Color.Blue;
             cbCategory.DisplayMember = "Name";
         }
 
@@ -38,6 +39,7 @@ namespace PhanMemQLCafe
         {
             List<Food> listFood = FoodDAO.Instance.GetFoodByCategoryID(id);
             cbFood.DataSource = listFood;
+            cbFood.ForeColor = Color.Blue;
             cbFood.DisplayMember = "Name";
         }
 
@@ -54,7 +56,10 @@ namespace PhanMemQLCafe
                     Width = TableDAO.TableWidth,
                     Height = TableDAO.TableHeight
                 };
-                btn.Text = item.Name + Environment.NewLine + item.Status;
+                btn.Text = item.Name + Environment.NewLine;
+                //btn.ForeColor = Color.Blue;
+                btn.Font = new Font("French Script MT", 18);
+                btn.ForeColor = Color.DarkBlue;
 
                 btn.Click += btn_Clik;
                 btn.Tag = item;
@@ -62,10 +67,12 @@ namespace PhanMemQLCafe
                 switch (item.Status)
                 {
                     case "Trống":
-                        btn.BackColor = Color.Aqua;
+                        //btn.BackColor = Color.Aqua;
+                        btn.Image = Image.FromFile("C:\\Users\\ADMIN\\Documents\\Study\\Hoc_Ki_6\\Thuc_Tap_Nhom\\MyProject\\QLCF\\Resources\\dinner-table.png");
                         break;
                     default:
-                        btn.BackColor = Color.IndianRed;
+                        //btn.BackColor = Color.IndianRed;
+                        btn.Image = Image.FromFile("C:\\Users\\ADMIN\\Documents\\Study\\Hoc_Ki_6\\Thuc_Tap_Nhom\\MyProject\\QLCF\\Resources\\guest.png");
                         break;
                 }
 
@@ -99,6 +106,7 @@ namespace PhanMemQLCafe
         {
             cb.DataSource = TableDAO.Instance.LoadTableList();
             cb.DisplayMember = "Name";
+            cb.ForeColor = Color.Green;
         }
 
         #endregion
@@ -158,21 +166,6 @@ namespace PhanMemQLCafe
             int foodID = (cbFood.SelectedItem as Food).ID;
 
             int count = (int)nmFoodCount.Value;
-
-            //if (billID == -1) //khi BillID này chưa tồn tại
-            //{
-            //    BillDAO.Instance.InsertBill(table.ID);
-            //    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
-            //}
-            //else if (billID != -1 && status == 1 && billID == BillDAO.Instance.GetMaxBill())
-            //{
-            //    BillDAO.Instance.InsertBill(table.ID);
-            //    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);          
-            //}
-            //else //Khi BillID này đã tồn tại
-            //{
-            //    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
-            //}
 
             if (billID == -1)
             {

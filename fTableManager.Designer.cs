@@ -194,31 +194,38 @@ namespace PhanMemQLCafe
             // 
             // btnAddFood
             // 
+            this.btnAddFood.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFood.ForeColor = System.Drawing.Color.MediumBlue;
+            this.btnAddFood.Image = global::PhanMemQLCafe.Properties.Resources.order__1_;
+            this.btnAddFood.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAddFood.Location = new System.Drawing.Point(218, 3);
             this.btnAddFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(96, 45);
             this.btnAddFood.TabIndex = 2;
             this.btnAddFood.Text = "Thêm món";
+            this.btnAddFood.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAddFood.UseVisualStyleBackColor = true;
             this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // cbFood
             // 
+            this.cbFood.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFood.FormattingEnabled = true;
             this.cbFood.Location = new System.Drawing.Point(2, 27);
             this.cbFood.Margin = new System.Windows.Forms.Padding(2);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(212, 21);
+            this.cbFood.Size = new System.Drawing.Size(212, 23);
             this.cbFood.TabIndex = 1;
             // 
             // cbCategory
             // 
+            this.cbCategory.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(2, 2);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(212, 21);
+            this.cbCategory.Size = new System.Drawing.Size(212, 23);
             this.cbCategory.TabIndex = 0;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -250,15 +257,18 @@ namespace PhanMemQLCafe
             // 
             // cbSwitchTable
             // 
+            this.cbSwitchTable.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSwitchTable.FormattingEnabled = true;
             this.cbSwitchTable.Location = new System.Drawing.Point(2, 28);
             this.cbSwitchTable.Margin = new System.Windows.Forms.Padding(2);
             this.cbSwitchTable.Name = "cbSwitchTable";
-            this.cbSwitchTable.Size = new System.Drawing.Size(94, 21);
+            this.cbSwitchTable.Size = new System.Drawing.Size(94, 23);
             this.cbSwitchTable.TabIndex = 4;
             // 
             // btnSwitchTable
             // 
+            this.btnSwitchTable.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSwitchTable.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnSwitchTable.Location = new System.Drawing.Point(2, 0);
             this.btnSwitchTable.Margin = new System.Windows.Forms.Padding(2);
             this.btnSwitchTable.Name = "btnSwitchTable";
@@ -279,6 +289,8 @@ namespace PhanMemQLCafe
             // 
             // btnDisCount
             // 
+            this.btnDisCount.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisCount.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnDisCount.Location = new System.Drawing.Point(100, 0);
             this.btnDisCount.Margin = new System.Windows.Forms.Padding(2);
             this.btnDisCount.Name = "btnDisCount";
@@ -290,12 +302,17 @@ namespace PhanMemQLCafe
             // btnCheckOut
             // 
             this.btnCheckOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnCheckOut.Image = global::PhanMemQLCafe.Properties.Resources.money__1_;
+            this.btnCheckOut.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCheckOut.Location = new System.Drawing.Point(296, 2);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCheckOut.Size = new System.Drawing.Size(89, 45);
             this.btnCheckOut.TabIndex = 8;
-            this.btnCheckOut.Text = "Thanh toán";
+            this.btnCheckOut.Text = "Thanh Toán";
+            this.btnCheckOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCheckOut.UseVisualStyleBackColor = true;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 

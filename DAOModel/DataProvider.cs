@@ -133,5 +133,10 @@ namespace PhanMemQLCafe.DAOModel
             }
 
         }
+
+        internal void ExecuteNonQuery()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
