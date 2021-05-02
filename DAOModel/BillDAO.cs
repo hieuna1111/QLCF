@@ -73,15 +73,15 @@ namespace PhanMemQLCafe.DAOModel
             return "";
         }
 
-        public void CheckOut(int id, int discount)
+        public void CheckOut(int id, int discount, float totalPrice)
         {
-            string query = "UPDATE dbo.Bill SET Status = 1 , "+ "Discount = "+ discount +" WHERE BillID = " + id + "";
+            string query = "UPDATE dbo.Bill SET DateCheckOut = GETDATE(), Status = 1 , "+" Discount = "+discount+", TotalPrice = "+totalPrice+" WHERE BillID = " + id + "";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         public void InsertBill(int id)
         {
-            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @TableID , member1", new object[] { id });
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @TableID , member2", new object[] { id });
             
         }
 
@@ -119,6 +119,11 @@ namespace PhanMemQLCafe.DAOModel
             {
                 return -1;
             }
+        }
+
+        public DataTable GetListBillByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut});
         }
     }
 }

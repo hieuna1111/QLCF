@@ -54,6 +54,7 @@
     <Compile Include="DAOModel\FoodDAO.cs" />
     <Compile Include="DAOModel\MenuDAO.cs" />
     <Compile Include="DAOModel\TableDAO.cs" />
+    <Compile Include="DTOModel\Account.cs" />
     <Compile Include="DTOModel\Bill.cs" />
     <Compile Include="DTOModel\BillInfo.cs" />
     <Compile Include="DTOModel\Category.cs" />

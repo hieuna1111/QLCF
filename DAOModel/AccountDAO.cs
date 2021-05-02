@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PhanMemQLCafe.DAOModel;
+using PhanMemQLCafe.DTOModel;
 
 namespace PhanMemQLCafe.DAOModel
 {
@@ -38,6 +39,17 @@ namespace PhanMemQLCafe.DAOModel
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, password});
 
             return result.Rows.Count > 0;
+        }
+
+        public Account GetAccountByUserName(string userName)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select *from Account where UserName = "+userName+"");
+
+            foreach (DataRow item in data.Rows)
+            {
+                return new Account(item);
+            }
+            return null;
         }
     }
 }

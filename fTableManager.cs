@@ -216,7 +216,7 @@ namespace PhanMemQLCafe
             {
                 if (MessageBox.Show(string.Format("Bạn có chắc chắn muốn thanh toán hóa đơn cho {0}?\nGiảm giá: {1}%\nThành tiền: {2}đ", table.Name, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(billID, discount);
+                    BillDAO.Instance.CheckOut(billID, discount, (float)finalTotalPrice);
                     ShowBill(table.ID);
 
                     LoadTable();
