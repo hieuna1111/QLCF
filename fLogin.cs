@@ -1,4 +1,5 @@
 ﻿using PhanMemQLCafe.DAOModel;
+using PhanMemQLCafe.DTOModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,8 @@ namespace PhanMemQLCafe
             string password = txbPassword.Text;
             if (Login(userName, password))
             {
-                fTableManager f = new fTableManager();
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                fTableManager f = new fTableManager(loginAccount);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

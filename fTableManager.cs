@@ -16,17 +16,36 @@ namespace PhanMemQLCafe
 {
     public partial class fTableManager : Form
     {
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.IsManager); }
+        }
 
-        public fTableManager()
+        public fTableManager(Account acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
             LoadTable();
             LoadCategory();
             LoadComboboxTable(cbSwitchTable);
         }
 
         #region Method
-        
+
+        //đổi text hiển thị của menuStrip
+        void ChangeAccountInfo(string info)
+        {
+            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + info + ")";
+        }
+
+        void ChangeAccount(bool isManager)
+        {
+            adminToolStripMenuItem.Enabled = isManager == true;
+            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.Name + ")";
+        }
+
         void LoadCategory()
         {
             List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
@@ -128,7 +147,8 @@ namespace PhanMemQLCafe
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccountProfile f = new fAccountProfile();
+            fAccountProfile f = new fAccountProfile(loginAccount);
+            f.ChangeInfo = ChangeAccountInfo; //Trước khi show form fAccountProfile từ form chính, ta gán giá trị cho delegate ChangeInfo
             f.ShowDialog();
         }
 

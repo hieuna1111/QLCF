@@ -58,7 +58,7 @@ namespace PhanMemQLCafe
             this.panel1.Controls.Add(this.txbUserName);
             this.panel1.Controls.Add(this.lbUserName);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 48);
             this.panel1.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace PhanMemQLCafe
             // txbUserName
             // 
             this.txbUserName.Location = new System.Drawing.Point(116, 15);
-            this.txbUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.ReadOnly = true;
             this.txbUserName.Size = new System.Drawing.Size(186, 20);
@@ -89,7 +89,7 @@ namespace PhanMemQLCafe
             this.panel2.Controls.Add(this.txbDisplayName);
             this.panel2.Controls.Add(this.lbDisplayName);
             this.panel2.Location = new System.Drawing.Point(9, 63);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(303, 48);
             this.panel2.TabIndex = 2;
@@ -97,7 +97,7 @@ namespace PhanMemQLCafe
             // txbDisplayName
             // 
             this.txbDisplayName.Location = new System.Drawing.Point(116, 15);
-            this.txbDisplayName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDisplayName.Margin = new System.Windows.Forms.Padding(2);
             this.txbDisplayName.Name = "txbDisplayName";
             this.txbDisplayName.Size = new System.Drawing.Size(186, 20);
             this.txbDisplayName.TabIndex = 1;
@@ -118,7 +118,7 @@ namespace PhanMemQLCafe
             this.panel3.Controls.Add(this.txbPassword);
             this.panel3.Controls.Add(this.lbPassword);
             this.panel3.Location = new System.Drawing.Point(9, 115);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(303, 48);
             this.panel3.TabIndex = 3;
@@ -126,7 +126,7 @@ namespace PhanMemQLCafe
             // txbPassword
             // 
             this.txbPassword.Location = new System.Drawing.Point(116, 15);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(186, 20);
             this.txbPassword.TabIndex = 1;
@@ -148,7 +148,7 @@ namespace PhanMemQLCafe
             this.panel4.Controls.Add(this.txbNewPassword);
             this.panel4.Controls.Add(this.lbNewPassword);
             this.panel4.Location = new System.Drawing.Point(9, 168);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(303, 48);
             this.panel4.TabIndex = 4;
@@ -156,7 +156,7 @@ namespace PhanMemQLCafe
             // txbNewPassword
             // 
             this.txbNewPassword.Location = new System.Drawing.Point(116, 15);
-            this.txbNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbNewPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txbNewPassword.Name = "txbNewPassword";
             this.txbNewPassword.Size = new System.Drawing.Size(186, 20);
             this.txbNewPassword.TabIndex = 1;
@@ -178,7 +178,7 @@ namespace PhanMemQLCafe
             this.panel5.Controls.Add(this.txbReEnterPassword);
             this.panel5.Controls.Add(this.lbReEnterPassword);
             this.panel5.Location = new System.Drawing.Point(7, 221);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(303, 48);
             this.panel5.TabIndex = 5;
@@ -186,7 +186,7 @@ namespace PhanMemQLCafe
             // txbReEnterPassword
             // 
             this.txbReEnterPassword.Location = new System.Drawing.Point(116, 15);
-            this.txbReEnterPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbReEnterPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txbReEnterPassword.Name = "txbReEnterPassword";
             this.txbReEnterPassword.Size = new System.Drawing.Size(186, 20);
             this.txbReEnterPassword.TabIndex = 1;
@@ -208,12 +208,13 @@ namespace PhanMemQLCafe
             this.btnUpdate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnUpdate.Location = new System.Drawing.Point(123, 279);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(78, 32);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -221,7 +222,7 @@ namespace PhanMemQLCafe
             this.btnExit.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Red;
             this.btnExit.Location = new System.Drawing.Point(231, 280);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(78, 32);
             this.btnExit.TabIndex = 7;
@@ -244,7 +245,7 @@ namespace PhanMemQLCafe
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fAccountProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin cá nhân";

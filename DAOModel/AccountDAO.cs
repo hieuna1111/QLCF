@@ -43,13 +43,19 @@ namespace PhanMemQLCafe.DAOModel
 
         public Account GetAccountByUserName(string userName)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("Select *from Account where UserName = "+userName+"");
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select * from Staff where UserName = '"+userName+"' ");
 
             foreach (DataRow item in data.Rows)
             {
                 return new Account(item);
             }
             return null;
+        }
+
+        public bool UpdateAccount(string userName, string name, string password, string newPassword)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("EXEC USP_UpdateAccount @userName , @name , @password , @newPassword", new object[] { userName, name, password, newPassword });
+            return result > 0;
         }
     }
 }
