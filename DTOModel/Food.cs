@@ -19,10 +19,10 @@ namespace PhanMemQLCafe.DTOModel
         
         public Food(DataRow row)
         {
-            this.ID = (int)row["FoodID"];
-            this.Name = row["Name"].ToString();
-            this.CategoryID = (int)row["CategoryID"];
             this.Price = (float)Convert.ToDouble(row["Price"].ToString());
+            this.CategoryID = (int)row["CategoryID"];
+            this.Name = row["Name"].ToString();
+            this.ID = (int)row["FoodID"];
         }
 
         private float price;

@@ -412,6 +412,7 @@ namespace PhanMemQLCafe
             this.txbFoodID.ReadOnly = true;
             this.txbFoodID.Size = new System.Drawing.Size(162, 20);
             this.txbFoodID.TabIndex = 1;
+            this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
             // 
             // lbUserName
             // 
@@ -445,6 +446,7 @@ namespace PhanMemQLCafe
             this.btnShowFood.TabIndex = 3;
             this.btnShowFood.Text = "Xem";
             this.btnShowFood.UseVisualStyleBackColor = true;
+            this.btnShowFood.Click += new System.EventHandler(this.btnShowFood_Click);
             // 
             // btnEditFood
             // 
@@ -495,6 +497,7 @@ namespace PhanMemQLCafe
             this.dtgvFood.RowTemplate.Height = 24;
             this.dtgvFood.Size = new System.Drawing.Size(329, 336);
             this.dtgvFood.TabIndex = 0;
+            this.dtgvFood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellContentClick);
             // 
             // tpFoodCategory
             // 

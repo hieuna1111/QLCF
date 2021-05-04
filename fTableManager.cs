@@ -177,42 +177,48 @@ namespace PhanMemQLCafe
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             Table table = lvBill.Tag as Table;
-
-            int billID = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
-
-            int billStatus = BillDAO.Instance.GetUncheckStatusByTableID(table.ID);
-            string tableStatus = (string)BillDAO.Instance.GetTableStatusByTableID(table.ID);
-
-            int foodID = (cbFood.SelectedItem as Food).ID;
-
-            int count = (int)nmFoodCount.Value;
-
-            if (billID == -1)
+            if (table != null)
             {
-                BillDAO.Instance.InsertBill(table.ID);
-                BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
+                int billID = BillDAO.Instance.GetUncheckBillIDByTableID(table.ID);
+
+                int billStatus = BillDAO.Instance.GetUncheckStatusByTableID(table.ID);
+                string tableStatus = (string)BillDAO.Instance.GetTableStatusByTableID(table.ID);
+
+                int foodID = (cbFood.SelectedItem as Food).ID;
+
+                int count = (int)nmFoodCount.Value;
+
+                if (billID == -1)
+                {
+                    BillDAO.Instance.InsertBill(table.ID);
+                    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
+                }
+                else if (billStatus == 0 && tableStatus == "Trống")
+                {
+                    BillInfoDAO.Instance.InsertBillInfo(foodID, billID, count);
+                }
+                else if (billStatus == 0 && tableStatus == "Đã có người")
+                {
+                    BillInfoDAO.Instance.InsertBillInfo(foodID, billID, count);
+                }
+                else if (billStatus == 1 && tableStatus == "Trống")
+                {
+                    BillDAO.Instance.InsertBill(table.ID);
+                    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
+                }
+                else if (billStatus == 1 && tableStatus == "Đã có người")
+                {
+                    BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
+                }
+
+                ShowBill(table.ID);
+
+                LoadTable();
             }
-            else if (billStatus == 0 && tableStatus == "Trống")
+            else
             {
-                BillInfoDAO.Instance.InsertBillInfo(foodID, billID, count);
+                MessageBox.Show("Bạn phải chọn bàn trước khi đặt món?", "Thông báo!", MessageBoxButtons.OKCancel);
             }
-            else if (billStatus == 0 && tableStatus == "Đã có người")
-            {
-                BillInfoDAO.Instance.InsertBillInfo(foodID, billID, count);
-            }
-            else if (billStatus == 1 && tableStatus == "Trống")
-            {
-                BillDAO.Instance.InsertBill(table.ID);
-                BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
-            }
-            else if (billStatus == 1 && tableStatus == "Đã có người")
-            {
-                BillInfoDAO.Instance.InsertBillInfo(foodID, BillDAO.Instance.GetMaxBill(), count);
-            }    
-
-            ShowBill(table.ID);
-            
-            LoadTable();
         }
         
 
