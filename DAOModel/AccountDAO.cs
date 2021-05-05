@@ -57,5 +57,23 @@ namespace PhanMemQLCafe.DAOModel
             int result = DataProvider.Instance.ExecuteNonQuery("EXEC USP_UpdateAccount @userName , @name , @password , @newPassword", new object[] { userName, name, password, newPassword });
             return result > 0;
         }
+
+        public List<Account> GetListAccount()
+        {
+            List<Account> list = new List<Account>();
+
+            string query = "SELECT * FROM dbo.Staff";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Account account = new Account(item);
+
+                list.Add(account);
+            }
+
+            return list;
+        }
     }
 }

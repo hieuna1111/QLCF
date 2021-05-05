@@ -264,10 +264,10 @@ namespace PhanMemQLCafe
             // 
             this.panel6.Controls.Add(this.txbSearchFoodName);
             this.panel6.Controls.Add(this.btnSearchFood);
-            this.panel6.Location = new System.Drawing.Point(345, 5);
+            this.panel6.Location = new System.Drawing.Point(360, 5);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(261, 46);
+            this.panel6.Size = new System.Drawing.Size(246, 46);
             this.panel6.TabIndex = 3;
             // 
             // txbSearchFoodName
@@ -275,18 +275,19 @@ namespace PhanMemQLCafe
             this.txbSearchFoodName.Location = new System.Drawing.Point(94, 11);
             this.txbSearchFoodName.Margin = new System.Windows.Forms.Padding(2);
             this.txbSearchFoodName.Name = "txbSearchFoodName";
-            this.txbSearchFoodName.Size = new System.Drawing.Size(162, 20);
+            this.txbSearchFoodName.Size = new System.Drawing.Size(147, 20);
             this.txbSearchFoodName.TabIndex = 2;
             // 
             // btnSearchFood
             // 
-            this.btnSearchFood.Location = new System.Drawing.Point(3, 2);
+            this.btnSearchFood.Location = new System.Drawing.Point(7, 9);
             this.btnSearchFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchFood.Name = "btnSearchFood";
-            this.btnSearchFood.Size = new System.Drawing.Size(70, 44);
+            this.btnSearchFood.Size = new System.Drawing.Size(70, 27);
             this.btnSearchFood.TabIndex = 1;
             this.btnSearchFood.Text = "Tìm kiếm";
             this.btnSearchFood.UseVisualStyleBackColor = true;
+            this.btnSearchFood.Click += new System.EventHandler(this.btnSearchFood_Click);
             // 
             // panel5
             // 
@@ -294,10 +295,10 @@ namespace PhanMemQLCafe
             this.panel5.Controls.Add(this.panel9);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel7);
-            this.panel5.Location = new System.Drawing.Point(345, 55);
+            this.panel5.Location = new System.Drawing.Point(360, 55);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(260, 341);
+            this.panel5.Size = new System.Drawing.Size(245, 341);
             this.panel5.TabIndex = 2;
             // 
             // panel10
@@ -320,7 +321,7 @@ namespace PhanMemQLCafe
             0,
             0});
             this.nmFoodPrice.Name = "nmFoodPrice";
-            this.nmFoodPrice.Size = new System.Drawing.Size(162, 20);
+            this.nmFoodPrice.Size = new System.Drawing.Size(147, 20);
             this.nmFoodPrice.TabIndex = 2;
             this.nmFoodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -351,7 +352,7 @@ namespace PhanMemQLCafe
             this.cbFoodCategory.Location = new System.Drawing.Point(92, 15);
             this.cbFoodCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbFoodCategory.Name = "cbFoodCategory";
-            this.cbFoodCategory.Size = new System.Drawing.Size(162, 21);
+            this.cbFoodCategory.Size = new System.Drawing.Size(147, 21);
             this.cbFoodCategory.TabIndex = 1;
             // 
             // label2
@@ -380,7 +381,7 @@ namespace PhanMemQLCafe
             this.txbFoodName.Location = new System.Drawing.Point(92, 14);
             this.txbFoodName.Margin = new System.Windows.Forms.Padding(2);
             this.txbFoodName.Name = "txbFoodName";
-            this.txbFoodName.Size = new System.Drawing.Size(162, 20);
+            this.txbFoodName.Size = new System.Drawing.Size(147, 20);
             this.txbFoodName.TabIndex = 1;
             // 
             // label1
@@ -410,7 +411,7 @@ namespace PhanMemQLCafe
             this.txbFoodID.Margin = new System.Windows.Forms.Padding(2);
             this.txbFoodID.Name = "txbFoodID";
             this.txbFoodID.ReadOnly = true;
-            this.txbFoodID.Size = new System.Drawing.Size(162, 20);
+            this.txbFoodID.Size = new System.Drawing.Size(147, 20);
             this.txbFoodID.TabIndex = 1;
             this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
             // 
@@ -434,12 +435,12 @@ namespace PhanMemQLCafe
             this.panel4.Location = new System.Drawing.Point(4, 5);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(334, 46);
+            this.panel4.Size = new System.Drawing.Size(352, 46);
             this.panel4.TabIndex = 1;
             // 
             // btnShowFood
             // 
-            this.btnShowFood.Location = new System.Drawing.Point(261, 2);
+            this.btnShowFood.Location = new System.Drawing.Point(280, 2);
             this.btnShowFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowFood.Name = "btnShowFood";
             this.btnShowFood.Size = new System.Drawing.Size(70, 41);
@@ -450,23 +451,25 @@ namespace PhanMemQLCafe
             // 
             // btnEditFood
             // 
-            this.btnEditFood.Location = new System.Drawing.Point(174, 2);
+            this.btnEditFood.Location = new System.Drawing.Point(188, 2);
             this.btnEditFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditFood.Name = "btnEditFood";
             this.btnEditFood.Size = new System.Drawing.Size(70, 41);
             this.btnEditFood.TabIndex = 2;
             this.btnEditFood.Text = "Sửa";
             this.btnEditFood.UseVisualStyleBackColor = true;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
             // 
             // btnDeleteFood
             // 
-            this.btnDeleteFood.Location = new System.Drawing.Point(88, 2);
+            this.btnDeleteFood.Location = new System.Drawing.Point(94, 2);
             this.btnDeleteFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteFood.Name = "btnDeleteFood";
             this.btnDeleteFood.Size = new System.Drawing.Size(70, 41);
             this.btnDeleteFood.TabIndex = 1;
             this.btnDeleteFood.Text = "Xóa";
             this.btnDeleteFood.UseVisualStyleBackColor = true;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
             // 
             // btnAddFood
             // 
@@ -477,6 +480,7 @@ namespace PhanMemQLCafe
             this.btnAddFood.TabIndex = 0;
             this.btnAddFood.Text = "Thêm";
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // panel3
             // 
@@ -484,18 +488,20 @@ namespace PhanMemQLCafe
             this.panel3.Location = new System.Drawing.Point(4, 55);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(334, 341);
+            this.panel3.Size = new System.Drawing.Size(352, 341);
             this.panel3.TabIndex = 0;
             // 
             // dtgvFood
             // 
+            this.dtgvFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvFood.Location = new System.Drawing.Point(2, 2);
+            this.dtgvFood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvFood.Location = new System.Drawing.Point(0, 0);
             this.dtgvFood.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.RowHeadersWidth = 51;
             this.dtgvFood.RowTemplate.Height = 24;
-            this.dtgvFood.Size = new System.Drawing.Size(329, 336);
+            this.dtgvFood.Size = new System.Drawing.Size(352, 341);
             this.dtgvFood.TabIndex = 0;
             this.dtgvFood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellContentClick);
             // 
@@ -524,6 +530,7 @@ namespace PhanMemQLCafe
             // 
             // dtgvCategory
             // 
+            this.dtgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvCategory.Location = new System.Drawing.Point(0, 0);
@@ -624,6 +631,7 @@ namespace PhanMemQLCafe
             this.btnShowCategory.TabIndex = 3;
             this.btnShowCategory.Text = "Xem";
             this.btnShowCategory.UseVisualStyleBackColor = true;
+            this.btnShowCategory.Click += new System.EventHandler(this.btnShowCategory_Click);
             // 
             // btnEditCategory
             // 

@@ -49,5 +49,10 @@ namespace PhanMemQLCafe.DAOModel
         {
             DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBillInfo @FoodID , @BillID , @Count", new object[] { foodID , billID , count });
         }
+
+        public void DeleteBillInfoByFoodID(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("DELETE dbo.BillInfo WHERE FoodID = " + id);
+        }
     }
 }
