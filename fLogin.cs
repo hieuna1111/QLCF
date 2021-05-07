@@ -17,6 +17,7 @@ namespace PhanMemQLCafe
         public fLogin()
         {
             InitializeComponent();
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace PhanMemQLCafe
             {
                 e.Cancel = true;
             }
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

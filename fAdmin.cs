@@ -42,6 +42,7 @@ namespace PhanMemQLCafe
             //account
             LoadListAccount();
             AddAccountBinding();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void label8_Click(object sender, EventArgs e)
