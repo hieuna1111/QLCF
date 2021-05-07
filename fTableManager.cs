@@ -86,12 +86,12 @@ namespace PhanMemQLCafe
                 switch (item.Status)
                 {
                     case "Trống":
-                        //btn.BackColor = Color.Aqua;
-                        btn.Image = Image.FromFile("C:\\Users\\ADMIN\\Documents\\Study\\Hoc_Ki_6\\Thuc_Tap_Nhom\\MyProject\\QLCF\\Resources\\dinner-table.png");
+                        btn.BackColor = Color.Aqua;
+                        //btn.Image = Image.FromFile("C:\\Users\\ADMIN\\Documents\\Study\\Hoc_Ki_6\\Thuc_Tap_Nhom\\MyProject\\QLCF\\Resources\\dinner-table.png");
                         break;
                     default:
-                        //btn.BackColor = Color.IndianRed;
-                        btn.Image = Image.FromFile("C:\\Users\\ADMIN\\Documents\\Study\\Hoc_Ki_6\\Thuc_Tap_Nhom\\MyProject\\QLCF\\Resources\\guest.png");
+                        btn.BackColor = Color.IndianRed;
+                        //btn.Image = Image.FromFile("C:\\Users\\ADMIN\\Documents\\Study\\Hoc_Ki_6\\Thuc_Tap_Nhom\\MyProject\\QLCF\\Resources\\guest.png");
                         break;
                 }
 
