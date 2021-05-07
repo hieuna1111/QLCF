@@ -1057,6 +1057,7 @@ namespace PhanMemQLCafe
             this.ClientSize = new System.Drawing.Size(640, 444);
             this.Controls.Add(this.tcAdmin);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
