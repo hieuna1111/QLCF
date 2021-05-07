@@ -144,8 +144,17 @@
     <None Include="Resources\order %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\close icon1.png" />
+    <None Include="Resources\add-image.png" />
+    <None Include="Resources\add-image2.png" />
+    <None Include="Resources\add-property2.png" />
+    <None Include="Resources\add-property3.png" />
+    <None Include="Resources\delete-forever1.png" />
+    <None Include="Resources\correct-document.png" />
     <Content Include="Resources\dinner-table.png" />
     <Content Include="Resources\guest.png" />
+    <None Include="Resources\key icon.png" />
+    <None Include="Resources\login-rounded-right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,6 +30,7 @@ namespace PhanMemQLCafe
             LoadTable();
             LoadCategory();
             LoadComboboxTable(cbSwitchTable);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         #region Method
@@ -295,5 +296,10 @@ namespace PhanMemQLCafe
         }
 
         #endregion
+
+        private void flpTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
