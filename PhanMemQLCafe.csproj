@@ -144,6 +144,10 @@
     <None Include="Resources\order %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logout-rounded-down.png" />
+    <None Include="Resources\user-male-circle %281%29.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\view-file1.png" />
     <None Include="Resources\close icon1.png" />
     <None Include="Resources\add-image.png" />
     <None Include="Resources\add-image2.png" />
@@ -151,7 +155,10 @@
     <None Include="Resources\add-property3.png" />
     <None Include="Resources\delete-forever1.png" />
     <None Include="Resources\correct-document.png" />
+    <None Include="Resources\bill-copy.png" />
     <Content Include="Resources\dinner-table.png" />
+    <None Include="Resources\edit-user.png" />
+    <None Include="Resources\edit-user %281%29.png" />
     <Content Include="Resources\guest.png" />
     <None Include="Resources\key icon.png" />
     <None Include="Resources\login-rounded-right.png" />

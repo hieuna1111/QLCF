@@ -202,6 +202,7 @@ namespace PhanMemQLCafe
         
         private void btnAddFood_Click(object sender, EventArgs e)
         {
+            
             Table table = lvBill.Tag as Table;
             if (table != null)
             {
@@ -298,6 +299,11 @@ namespace PhanMemQLCafe
         #endregion
 
         private void flpTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbSwitchTable_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -63,3 +63,16 @@ D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu2\QLCF\obj\Debug\PhanMemQLCafe.csproj.Gene
 D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu2\QLCF\obj\Debug\PhanMemQLCafe.csproj.CoreCompileInputs.cache
 D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu2\QLCF\obj\Debug\PhanMemQLCafe.exe
 D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu2\QLCF\obj\Debug\PhanMemQLCafe.pdb
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\bin\Debug\PhanMemQLCafe.exe.config
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\bin\Debug\PhanMemQLCafe.exe
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\bin\Debug\PhanMemQLCafe.pdb
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.csprojAssemblyReference.cache
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.fAccountProfile.resources
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.fAdmin.resources
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.fLogin.resources
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.fTableManager.resources
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.Properties.Resources.resources
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.csproj.GenerateResource.cache
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.csproj.CoreCompileInputs.cache
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.exe
+D:\K17\Nam3-ki2\Thưc tập nhóm\Hieu3\QLCF\obj\Debug\PhanMemQLCafe.pdb
