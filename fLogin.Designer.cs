@@ -59,7 +59,6 @@
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.Size = new System.Drawing.Size(166, 20);
             this.txbUserName.TabIndex = 1;
-            this.txbUserName.Text = "huong";
             // 
             // lbUserName
             // 
@@ -89,7 +88,6 @@
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(166, 20);
             this.txbPassword.TabIndex = 2;
-            this.txbPassword.Text = "1111";
             this.txbPassword.UseSystemPasswordChar = true;
             // 
             // lbPassword
